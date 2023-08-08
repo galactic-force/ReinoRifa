@@ -1,0 +1,102 @@
+/* Apply box-sizing to all elements */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightgray;
+    background-size: cover;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 970px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url("images/mahdi-bafande-mKTjq8RsmzI-unsplash-background.jpg");
+  }
+  
+  /* Style the header */
+  .header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left middle middle right right' 
+      'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+  .left,
+  .middle,
+  .right {
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    background-size: cover;
+    background-position: center;
+    background-size: contain;
+  }
+  
+  /* Style the left column */
+  .left {
+    grid-area: left;
+    background-image: url("images/adrian-curiel-vbQsU3kVVPI-unsplash-10.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Style the middle column */
+  .middle {
+    grid-area: middle;
+    background-image: url("images/matthew-ball-TFE_-9eLmEs-unsplash-20.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Style the right column */
+  .right {
+    grid-area: right;
+    background-image: url("images/elisa-rYrawNU0wH0-unsplash-50.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Style the footer */
+  .footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  h1, h2, p {
+    text-align: center;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle middle' 
+        'right right right right right right' 
+        'footer footer footer footer footer footer';
+    }
+  }
+  
