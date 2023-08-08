@@ -21,7 +21,7 @@
     max-width: 970px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: url("images/mahdi-bafande-mKTjq8RsmzI-unsplash-background.jpg");
+    background-image: url("mahdi-bafande-mKTjq8RsmzI-unsplash-background.jpg");
   }
   
   /* Style the header */
@@ -55,25 +55,40 @@
   /* Style the left column */
   .left {
     grid-area: left;
-    background-image: url("images/adrian-curiel-vbQsU3kVVPI-unsplash-10.jpg");
+    background-image: url("adrian-curiel-vbQsU3kVVPI-unsplash-10.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
   }
   
   /* Style the middle column */
   .middle {
     grid-area: middle;
-    background-image: url("images/matthew-ball-TFE_-9eLmEs-unsplash-20.jpeg");
+    background-image: url("matthew-ball-TFE_-9eLmEs-unsplash-20.jpeg");
     background-position: center;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
   }
   
   /* Style the right column */
   .right {
     grid-area: right;
-    background-image: url("images/elisa-rYrawNU0wH0-unsplash-50.jpg");
+    background-image: url("elisa-rYrawNU0wH0-unsplash-50.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .left:hover {
+    transform: scale(1.1);
+  }
+
+  .middle:hover {
+    transform: scale(1.1);
+  }
+
+  .right:hover {
+    transform: scale(1.1);
   }
   
   /* Style the footer */
