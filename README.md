@@ -1,2 +1,2 @@
 # ReinoRifa
-Una rifa fija.
+
