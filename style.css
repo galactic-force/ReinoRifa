@@ -18,44 +18,122 @@
   
   .container {
     width: 100%;
-    max-width: 970px;
+    max-width: 950px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: url("mahdi-bafande-mKTjq8RsmzI-unsplash-background.jpg");
+    /*background-image: url("mahdi-bafande-mKTjq8RsmzI-unsplash-background.jpg");*/
   }
   
   /* Style the header */
   .header {
     grid-area: header;
-    background-color: #f1f1f1;
+    background-color: whitesmoke;
     padding: 30px;
     text-align: center;
   }
   
   /* The grid container */
   .grid-container {
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: grid;
     grid-template-areas: 
       'header header header header header header' 
       'left left middle middle right right' 
       'footer footer footer footer footer footer';
+    grid-template-columns: auto;
+    gap: 10px;
     /* grid-column-gap: 10px; - if you want gap between the columns */
   } 
-  
+  .grid-container-10 {
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-areas: 
+      'header header header header header' 
+      'left middle middle middle right' 
+      'footer footer footer footer footer';
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+
+  .one,
+  .two,
+  .three,
+  .four,
+  .five,
+  .six,
+  .seven,
+  .eight,
+  .nine,
+  .ten {
+    padding: 20px;
+    height: 200px; /* Should be removed. Only for demonstration */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .one {
+    background-image: url("images/madalyn-cox-jxBI-OsP8MY-unsplash-6.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+  }
+  .two {
+    background-image: url("images/chandler-cruttenden-fqNb3TGbePA-unsplash-4.webp");
+  }
+
+  .three {
+    background-image: url("images/alec-favale-Ivzo69e18nk-unsplash-2.webp");
+  }
+
+  .four {
+    background-image: url("images/bundo-kim-AwyVXNDSdYU-unsplash-3.webp");
+  }
+
+  .five {
+    background-image: url("images/chandler-cruttenden-fqNb3TGbePA-unsplash-4.webp");
+  }
+
+  .six {
+    background-image: url("images/kevin-turcios-rls2bfqYh8E-unsplash-1.webp");
+  }
+
+  .seven {
+    background-image: url("images/madalyn-cox-jxBI-OsP8MY-unsplash-6.webp");
+  }
+
+  .eight {
+    background-image: url("images/noelle-hkk_YVE2EG0-unsplash-7.webp");
+  }
+
+  .nine {
+    background-image: url("images/noelle-hkk_YVE2EG0-unsplash-8.webp");
+  }
+
+  .ten {
+    background-image: url("images/noelle-yGYe5rnnTRc-unsplash-9.webp");
+  }
+
+  .one:hover {
+    transform: scale(1.1);
+  }
+
   .left,
   .middle,
   .right {
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+    padding: 20px;
+    height: 200px; /* Should be removed. Only for demonstration */
     background-size: cover;
     background-position: center;
-    background-size: contain;
   }
   
   /* Style the left column */
   .left {
     grid-area: left;
-    background-image: url("adrian-curiel-vbQsU3kVVPI-unsplash-10.jpg");
+    background-image: url("images/adrian-curiel-vbQsU3kVVPI-unsplash-10.jpg");
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.3s ease-in-out;
@@ -64,7 +142,7 @@
   /* Style the middle column */
   .middle {
     grid-area: middle;
-    background-image: url("matthew-ball-TFE_-9eLmEs-unsplash-20.jpeg");
+    background-image: url("images/matthew-ball-TFE_-9eLmEs-unsplash-20.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.3s ease-in-out;
@@ -73,7 +151,7 @@
   /* Style the right column */
   .right {
     grid-area: right;
-    background-image: url("elisa-rYrawNU0wH0-unsplash-50.jpg");
+    background-image: url("images/elisa-rYrawNU0wH0-unsplash-50.jpg");
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.3s ease-in-out;
@@ -95,8 +173,19 @@
   .footer {
     grid-area: footer;
     background-color: #f1f1f1;
-    padding: 10px;
+    padding: 40px;
     text-align: center;
+  }
+
+  #myButton {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  #imageContainer img {
+    max-width: 100%;
+    height: auto;
+    display: none;
   }
   
   h1, h2, p {
@@ -106,12 +195,51 @@
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media (max-width: 600px) {
     .grid-container  {
+      text-indent: inherit;
       grid-template-areas: 
         'header header header header header header' 
         'left left left left left left' 
         'middle middle middle middle middle middle' 
         'right right right right right right' 
         'footer footer footer footer footer footer';
+      gap: 20px;
+    }
+
+    .grid-container-10 {
+      color: black;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-areas: 
+        'header header header header header' 
+        'left middle middle middle right' 
+        'footer footer footer footer footer';
+      gap: 10px;
+    }
+  
+    .one,
+    .two,
+    .three,
+    .four,
+    .five,
+    .six,
+    .seven,
+    .eight,
+    .nine,
+    .ten {
+      padding: 20px;
+      height: 200px; /* Should be removed. Only for demonstration */
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .one {
+      background-image: url("louis-philippe-poitras-sJgucUmcaKE-unsplash-0.jpeg");
+      
+    }
+    .two {
+      background-image: url("kevin-turcios-rls2bfqYh8E-unsplash-1.jpg");
+      
     }
   }
   
