@@ -1,2 +1,2 @@
-# ReinoRifa
-Una rifa fija.
+# WebpPR
+An image exchange site for artists.
